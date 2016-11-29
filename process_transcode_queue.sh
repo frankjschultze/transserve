@@ -36,6 +36,6 @@ if [ "$short" != "._" ]; then
 	ffmpeg -y -threads 0 -i "$1/$2" -r 25 -b:v 800k -c:v libx264 -profile:v high422 -s 896x504 -preset veryslow -passlogfile ~/log/log -c:a libfdk_aac -b:a 128k -ar 48000 -pass 2 "/home/ingest/out_750k/${filename}_750k.${extension}"
 
 	#delete
-	rm -rf "$1/$2"
+	#rm -rf "$1/$2"
 fi
 exit 0
